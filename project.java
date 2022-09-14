@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 //import java.util.Scanner;
 // interface vaccine{
 //     public void detail();
@@ -7,30 +9,12 @@
 class vacinator{
     String name;
     String id;
-
-    vacinator(String n,String id){
-    this.name=n;
-    this.id=id;
-    }
-    public void Checkout(int temprature){
-        if(temprature<6){
-            
-        }
-        else{
-            System.out.println("Vaccine are not able to use becuase temprature is less than 6 centigrade");
-        }
-
-    }
-    
-}
-// vaccine 
-class vaccine{
     int Measeales;
     int BCG;
     int Rota;
     int peta;
     int tt;
-vaccine(int m,int b,int r,int p,int t){
+void set_vaccine(int m,int b,int r,int p,int t){
 this.BCG=b;
 this.Measeales=m;
 this.Rota=r;
@@ -44,11 +28,35 @@ public void detail(){
     System.out.println("peta" + peta);
     System.out.println("tt" + tt);
 }
-}
+
+    vacinator(String n,String id){
+    this.name=n;
+    this.id=id;
+    }
+    public void disply(){
+        System.out.println("Name" + name);
+        System.out.println("Id "+ id);
+    }
+ }
+// vaccine 
+
 public class project{
  
     public static void main(String[] args) {
-     
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter your name");
+        String name = sc.nextLine();
+        System.out.println("Enter vaccinater id ");
+        String id = sc.nextLine();
+        vacinator v1 = new vacinator(name, id);   
+     System.out.println("Enter refrigernater temprature ");
+     int tem = sc.nextInt();
+     if(tem<=6){
+         System.out.println("Welcome to vaccine house ");
+         System.out.flush();
+         System.out.println("kfdjksdj");
+    //  v1.set_vaccine(m, b, r, p, t);
+     }
  
 
     }
