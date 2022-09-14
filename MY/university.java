@@ -1,6 +1,4 @@
 package MY;
-import java.io.IOException;
-import java.security.spec.PKCS8EncodedKeySpec;
 // import java.io.Console;
 import java.util.Scanner;
 
@@ -12,7 +10,7 @@ class vacinator {
     int Rota;
     int peta;
     int tt;
-
+// set vaccine quaintity
     void set_vaccine(int m, int b, int r, int p, int t) {
         this.BCG = b;
         this.Measeales = m;
@@ -51,7 +49,27 @@ class vacinator {
         System.out.println("Id " + id);
     }
 }
-// vaccine
+  
+class Child {
+    String name;
+    public void setChild(String name ){
+    this.name=name;
+    }
+    public void process(int age){
+        if(age<2){
+            System.out.println("inject BCG vaccine ");
+        }
+        else if(age>2&&age<=3){
+            System.out.println("Inject measles");
+        }
+        else if(age>3&&age<=4){
+            System.out.println("Inject penta");
+        }
+        else if(age>4&&age<=5){
+            System.out.println("Inject rota and tt both in leg");
+        }
+    }
+}
 
 public class university {
 
@@ -65,7 +83,7 @@ public class university {
         System.out.println("Enter refrigernater temprature ");
         int tem = sc.nextInt();
         if (tem <= 6) {
-            menu:
+            
             System.out.println("Welcome to vaccine house ");
            System.out.println("Press 1 : Check result ");
            System.out.println("press 2 : manage vaccine staff");
@@ -86,7 +104,7 @@ public class university {
                 System.out.println("Enter TT quaintity");
                 int t = sc.nextInt();
                 v1.set_vaccine(m, b, r, p, t);
-                
+                System.out.println("Enter area name ");
                 break;
                default:
                System.out.println("Wrong option ");
