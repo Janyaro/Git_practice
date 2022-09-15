@@ -1,7 +1,12 @@
 package MY;
-// import java.io.Console;
-import java.util.Scanner;
+import java.util.Date;
 
+import java.util.Scanner;
+interface Child1
+{
+    public void setname();
+    
+}
 class vacinator {
     String name;
     String id;
@@ -51,30 +56,39 @@ class vacinator {
 }
   
 class Child {
+    Date d2 = new Date();
     String name;
-    public void setChild(String name ){
+    int age;
+    public void setChild(String name  ){
     this.name=name;
+    
     }
-    public void process(int age){
-        if(age<2){
-            System.out.println("inject BCG vaccine ");
-        }
-        else if(age>2&&age<=3){
-            System.out.println("Inject measles");
-        }
-        else if(age>3&&age<=4){
-            System.out.println("Inject penta");
-        }
-        else if(age>4&&age<=5){
-            System.out.println("Inject rota and tt both in leg");
-        }
-    }
+//     public void process(int age){
+//         if(age<2){
+//             System.out.println("inject BCG vaccine ");
+//         System.out.println(d2);
+
+//         }
+//         else if(age>2&&age<=3){
+//             System.out.println("Inject measles");
+//         }
+//         else if(age>3&&age<=4){
+//             System.out.println("Inject penta");
+//         }
+//         else if(age>4&&age<=5){
+//             System.out.println("Inject rota and tt both in leg");
+//         }
+//     }
 }
 
 public class university {
 
     public static void main(String[] args)  {
+        Child c1 = new Child();
         Scanner sc = new Scanner(System.in);
+        Date d1 = new Date();
+
+    System.out.println(d1);
         System.out.println("Enter your name");
         String name = sc.nextLine();
         System.out.println("Enter vaccinater id ");
@@ -104,7 +118,20 @@ public class university {
                 System.out.println("Enter TT quaintity");
                 int t = sc.nextInt();
                 v1.set_vaccine(m, b, r, p, t);
-                System.out.println("Enter area name ");
+
+               System.out.println("do you want to continue the process");
+            String  con = sc.nextLine();
+            if(con=="yes"){
+                System.out.println("Enter child name");
+                String stu_name= sc.nextLine();
+            c1.setChild(stu_name);
+            System.out.println("Enter age in year");
+            int age =sc.nextInt();
+            if(age<2){
+                System.out.println(d1);
+                System.out.println("BCG injection inject and second does will inject after 30 days");
+            }
+            }
                 break;
                default:
                System.out.println("Wrong option ");
